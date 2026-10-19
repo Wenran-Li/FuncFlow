@@ -1,0 +1,17 @@
+# E7 hierarchical conditioning ablation.
+# 40 validation profiles × 5 samples = 200 structures per mode.
+defaults:
+  - _inference
+  - _self_
+
+inference:
+  task: validation_hierarchical
+  ckpt_path: null  # Supply the E7 checkpoint at runtime.
+  num_gpus: 1
+  samples:
+    num_profiles: 40
+    samples_per_profile: 5
+
+pdb_dataset:
+  filter:
+    max_num_res: 512

@@ -1,0 +1,16 @@
+# Unconditional sampling
+defaults:
+  - _inference
+  - _self_
+
+inference:
+  task: ss_conditional
+
+  ckpt_path: ckpt/se3-fm/hallucination_pdb/2026-10-02_04-08-58/last.ckpt
+
+  # First sanity test
+  num_gpus: 1
+
+  samples:
+    ss_length: 128
+    samples_per_condition: 2

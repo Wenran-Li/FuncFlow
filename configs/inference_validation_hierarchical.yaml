@@ -1,0 +1,14 @@
+defaults:
+  - _inference
+  - _self_
+
+inference:
+  task: validation_hierarchical
+
+  ckpt_path: ckpt/se3-fm/hallucination_pdb/2026-10-03_06-57-20/last.ckpt
+
+  num_gpus: 1
+
+  samples:
+    num_profiles: 20
+    samples_per_profile: 2
